@@ -1,0 +1,32 @@
+<!-- 프로필 팝업창 -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="profile-pop.css">
+        <title>프로필 팝업창 버튼</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    </head>
+
+    <body>
+        <nav id="topMenu">
+            <ul>
+                <!--<li><a class="menuLinkLogo" href="#"><img class="logo" src="../img/ECAC_logo.jpg"></a></li>-->
+                <li><a class="menuLink" href="../calculateActivity/calculate.html">points</a></li>
+                <li><a class="menuLink" href="../searchActivity/search.html">search</a></li>
+                <li><a class="menuLink" href="../declarePopup/declarePopup.html">myPage</a></li>
+            </ul>
+        </nav>
+
+        <input type="button" value="프로필" onclick="showProfilepop();" />        
+    </body>
+
+    <script language="javascript">
+        function showProfilepop() {
+            window.open("Profile-popup.html", "a", "width=408 height=300, left=100, top=50");
+        }
+    </script>
+</html>

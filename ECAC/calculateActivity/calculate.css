@@ -1,0 +1,59 @@
+/* Header 구현부 */
+#topMenu{
+    width:100%;
+    height:95px;
+    background-color: white;
+  }
+  
+  #topMenu ul li {                     
+    list-style: none;                  
+    float:right;               
+    line-height: 89px;
+    font-weight: bold;
+    vertical-align: middle;   
+  
+  }
+  
+  #topMenu .menuLink {         
+    margin-right: 20px;                   
+    text-decoration:none;     
+    color:black;
+    display: block;                            
+    font-size: 20px; 
+    width: 170px;
+    text-align: right;   
+    font-family: 'Noto Sans KR', sans-serif;                     
+  }
+  
+  .logo {
+    padding-top: 13px;
+    width: 120px;
+    height: 70px;
+  }
+.box1{
+    display: auto;
+    background-color: #C4C4C4;
+    margin: 30px 30px 30px 30px;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 400px;
+    position: relative;
+    left: 33%;
+    font-weight: bold;
+}
+
+.box2{
+    display: auto;
+    background-color: #C4C4C4;
+    margin: 30px 80px 30px 80px;
+    padding: 20px 20px 20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    font-weight: bold;
+    font-size: large;
+}

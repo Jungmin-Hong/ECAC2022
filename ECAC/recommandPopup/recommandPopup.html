@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+    <link rel="stylesheet" type="text/css" href="recommandPopup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <nav id="topMenu">
+        <ul>
+            <!--<li><a class="menuLinkLogo" href="#"><img class="logo" src="../img/ECAC_logo.jpg"></a></li>-->
+            <li><a class="menuLink" href="../calculateActivity/calculate.html">points</a></li>
+            <li><a class="menuLink" href="../searchActivity/search.html">search</a></li>
+            <li><a class="menuLink" href="../declarePopup/declarePopup.html">myPage</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 테스트용 -->
+    <a href="javascript:openPop()">
+        <div>
+            추천하기 버튼클릭
+        </div>
+    </a>
+
+    <div class="popup_layer" id="popup_layer" style="display: none;">
+        <div class="popup_box">
+            <div style="height: 10px; width: 375px; float: top;">
+                <!-- <a href="javascript:closePop();"><img src="/static/img/ic_close.svg" class="m_header-banner-close" width="30px" height="30px"></a> -->
+            </div>
+        
+        <!-- 팝업 컨텐츠 영역 -->
+        <div class="popup_cont">
+            <h5>(카테고리) 추천 활동</h5>
+          <p>
+            <input type="radio" name="recommand_type" value="activity1"/>관련 활동1<br>
+            <input type="radio" name="recommand_type" value="activity2"/>관련 활동2<br>
+            <input type="radio" name="recommand_type" value="activity3"/>관련 활동3<br>
+            <input type="radio" name="recommand_type" value="activity4"/>관련 활동4<br>
+            <input type="radio" name="recommand_type" value="activity5"/>관련 활동5<br>
+            <input type="radio" name="recommand_type" value="else"/>기타<br>           
+          </p>
+        </div>
+
+        <!--팝업 버튼 영역-->
+        <div class="popup_btn" style="float: bottom;" margin-top: 200px;>
+            <a href="javascript:recommandSelect(); javascript:closePop();">확인</a>
+        </div>
+    </div>
+</div>
+
+    <script>
+    // 팝업 띄우기
+    function openPop() {
+        document.getElementById("popup_layer").style.display = "block";
+    }
+    //팝업 닫기
+    function closePop() {
+        document.getElementById("popup_layer").style.display = "none";
+    }
+    </script>
+
+<script>
+    function recommandSelect() {
+        var obj_length = document.getElementsByName("recommand_type").length;
+  
+        for (var i=0; i<obj_length; i++) {
+            if (document.getElementsByName("recommand_type")[i].checked == true) {
+                alert(document.getElementsByName("recommand_type")[i].value);
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

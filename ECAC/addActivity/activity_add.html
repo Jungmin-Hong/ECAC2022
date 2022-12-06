@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="activity_add.css">
+        <title>활동 등록 화면</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <nav id="topMenu">
+            <ul>
+                <!--<li><a class="menuLinkLogo" href="#"><img class="logo" src="../img/ECAC_logo.jpg"></a></li>-->
+                <li><a class="menuLink" href="../calculateActivity/calculate.html">points</a></li>
+                <li><a class="menuLink" href="../searchActivity/search.html">search</a></li>
+                <li><a class="menuLink" href="../declarePopup/declarePopup.html">myPage</a></li>
+            </ul>
+        </nav>
+        
+        <div class="body-whole">
+        <div class="search">
+            <input type="text" class="content-search" placeholder="활동 기관 검색">
+            <img class="img-search" src="img/돋보기.png">
+        </div>
+        
+        <div class="content_main">
+            <input type="text" class="content1" placeholder="공모전 A" readonly/>
+            <input type="text" class="content2" placeholder="분야: IT, 개발, 아이디어" readonly/>
+            <input type="text" class="content2" placeholder="스마트 관광을 위한 아이디어를 제시하고, 이를 앱으로 개발하는 공모전이다." readonly/>
+            <div class="for-date">
+                <input type="text" class="content-date" placeholder="해당 공모전에 참여했습니다.(참여 날짜: 2022.04.01)" readonly/>
+                <input type="text" class="content-date" placeholder="해당 공모전에서 수상했습니다.(수상 날짜: 2022.05.01)" readonly/>
+            </div>
+        </div>
+        
+        <div class="plus">
+            <table id='table'>
+                <tr>
+                    <th>보관할 자료 추가</th>
+                </tr>
+                <tbody>
+                    <tr id="no">
+                        <td><input type="text" class="add-file" readonly/></td>
+                        <!-- <td><input type="text" class="add-file" readonly/><img class="img-file" src="img/file.jpg"></td> -->
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <input type="text" class="content3" placeholder="보관할 자료 추가" readonly/> -->
+            
+            <!-- <img class="img-file" src="img/file.jpg"> -->
+            <button type="button" class="btn-plus" onclick='addRow()'><img class="img-plus" src="img/plus.jpg" alt=""></button>
+        </div>
+    </div>
+    </body>
+    <script>
+
+    function addRow() {
+        // table element 찾기
+        const table = document.getElementById('table');
+        
+        // 새 행(Row) 추가
+        const newRow = table.insertRow();
+        
+        // 새 행(Row)에 Cell 추가
+        const newCell = newRow.insertCell(0);
+        
+        // Cell에 텍스트 추가
+        // newCell.innerHTML = "<input type='text' class='add-file' readonly/><img class='img-file' src='img/file.jpg'>";   
+        newCell.innerHTML = "<input type='text' class='add-file' readonly/>";    
+    }
+    </script>
+</html>
