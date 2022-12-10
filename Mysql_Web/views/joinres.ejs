@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>Join Result</title>
+        <style>
+            table, th, td {
+                border : 1px solid #bcbcbc;
+            }
+            table{
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>ID</th>
+                <th>PhoneNum</th>
+                <th>PerHash</th>
+                <th>ActName</th>
+                <th>ActDate</th>
+                <th>HostOrg</th>
+            </tr>
+            <% joinres.forEach(function (value) { %>
+            <tr>
+                <td><%= value.Name %></td>
+                <td><%= value.ID %></td>
+                <td><%= value.PhoneNum %></td>
+                <td><%= value.PerHash %></td>
+                <td><%= value.ActName %></td>
+                <td><%= value.ActDate %></td>
+                <td><%= value.HostOrg %></td>
+            </tr>
+           <% }); %>
+        </table>
+    </body>
+</html>
